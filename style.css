@@ -1,0 +1,204 @@
+/* =========================================
+   LOGIN PAGE STYLES
+   ========================================= */
+
+.login-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Fills the whole screen height */
+    background-color: #fafafa;
+}
+
+.login-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.login-card {
+    background-color: #ffffff;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    padding: 40px;
+    width: 340px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.02); /* Very soft shadow */
+}
+
+/* Header */
+.login-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.login-logo {
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+.login-header h2 {
+    margin: 0 0 5px 0;
+    font-size: 22px;
+    color: #333;
+}
+
+.login-header p {
+    margin: 0;
+    color: #777;
+    font-size: 14px;
+}
+
+/* Form Inputs */
+.input-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #555;
+}
+
+.input-group input[type="text"],
+.input-group input[type="password"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: sans-serif;
+}
+
+/* Remember Me Checkbox */
+.remember-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    gap: 8px;
+}
+
+.remember-group label {
+    font-size: 13px;
+    color: #666;
+    cursor: pointer;
+}
+
+/* Login Button */
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.login-btn:hover {
+    background-color: #555;
+}
+
+/* Footer Links */
+.login-footer {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 13px;
+    color: #666;
+}
+
+.login-footer a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/* --- Basic Setup --- */
+body {
+    margin: 0;
+    font-family: sans-serif;
+    color: #333;
+}
+
+/* --- Navigation Bar --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f1f1f1;
+    border-bottom: 1px solid #ccc;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    height: 60px;
+    margin-right: 15px;
+}
+
+.logout-btn {
+    padding: 8px 15px;
+    border: 1px solid #666;
+    background-color: white;
+    cursor: pointer;
+}
+
+/* --- Dashboard Text --- */
+.dashboard-container {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* --- Cards Layout --- */
+.cards-section {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.card {
+    border: 1px solid #ccc;
+    background-color: white;
+    padding: 30px;
+    width: 300px;
+    cursor: pointer;
+}
+
+.icon-wrapper {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+/* --- Venue List --- */
+.venue-list {
+    margin: 30px auto;
+    max-width: 620px; 
+    border: 1px solid #ccc;
+    padding: 20px 40px;
+    text-align: left;
+    background-color: #f9f9f9;
+}
+
+.venue-list h3 {
+    margin-top: 0;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.venue-list ul {
+    padding-left: 20px;
+    line-height: 1.8;
+}
+
+/* Hides the list */
+.hidden {
+    display: none;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venue Booking Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo-section">
+            <img src="cit logo.png" alt="CIT Logo" class="logo-image">
+            <h2>CIT Venue Booking Portal</h2>
+        </div>
+        <button class="logout-btn">Logout</button>
+    </header>
+
+    <main class="dashboard-container">
+        <div class="dashboard-header">
+            <h2>Welcome to the CIT Venue Booking Dashboard</h2>
+            <p>Manage your venue bookings efficiently and effectively.</p>
+        </div>
+
+        <div class="cards-section">
+            <div class="card clickable" id="available-venues-card">
+                <div class="icon-wrapper">🏢</div>
+                <h3>Available Venues</h3>
+                <p>View and manage the list of available venues for booking.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon-wrapper">📅</div>
+                <h3>Book A Venue</h3>
+                <p>Reserve a venue for your event or meeting.</p>
+            </div>
+        </div>
+
+        <div id="venue-list-section" class="venue-list hidden">
+            <h3>Available Venues</h3>
+            <ul>
+                <li>Auditorium - Capacity: 200</li>
+                <li>Conference Room A - Capacity: 50</li>
+                <li>Conference Room B - Capacity: 30</li>
+                <li>Outdoor Space - Capacity: 100</li>
+            </ul>
+        </div>
+    </main>
+</body>
+</html>
