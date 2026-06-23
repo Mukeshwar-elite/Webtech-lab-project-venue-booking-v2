@@ -1,19 +1,23 @@
-/* =========================================
-   LOGIN PAGE STYLES
-   ========================================= */
+/* login page style */
 
 .login-body {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Fills the whole screen height */
-    background-color: #fafafa;
+    flex-direction: column;
+    min-height: 100vh;      
+    margin: 0;
+    background-image: url('cit-clg-img.jpg'); 
+    background-size: cover;                 
+    background-position: center;            
+    background-repeat: no-repeat;           
 }
-
 .login-wrapper {
-    width: 100%;
+    flex: 1; 
     display: flex;
     justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px; 
+    box-sizing: border-box;
 }
 
 .login-card {
@@ -201,4 +205,16 @@ body {
 /* Hides the list */
 .hidden {
     display: none;
+}
+
+/* --- FOOTER STYLES --- */
+.site-footer {
+    text-align: center;
+    color: black; 
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    padding: 15px; 
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8); 
+    width: 100%;
+    box-sizing: border-box;
 }
