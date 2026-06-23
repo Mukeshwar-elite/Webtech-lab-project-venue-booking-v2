@@ -20,13 +20,19 @@
             <form id="login-form">
                 <div class="input-group">
                     <label for="username">Username</label>
-                    <input type="text" id="username" required>
+                    <input type="text" id="username" placeholder="Enter your username" required>
                 </div>
                 
                 <div class="input-group">
                     <label for="password">Password</label>
-                    <input type="password" id="password" required>
+                    <input type="password" id="password" placeholder="Enter valid password" required>
                 </div>
+                
+                <div class="input-group">
+                    <label>Security Check</label>
+                    <div id="captcha-display" style="background-color: #eee; padding: 10px; text-align: center; font-size: 18px; font-weight: bold; letter-spacing: 5px; margin-bottom: 8px; border-radius: 4px;">0000</div>
+                    <input type="text" id="captcha-input" placeholder="Type the 4 digit code" required> 
+                </div> 
 
                 <div class="remember-group">
                     <input type="checkbox" id="remember">
@@ -42,5 +48,10 @@
 
         </div>
     </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Coimbatore Institute of Technology. All Rights Reserved.</p>
+    </footer>
+
 </body>
 </html>
