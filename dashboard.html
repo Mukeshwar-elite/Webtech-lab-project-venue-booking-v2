@@ -6,45 +6,60 @@
     <title>Venue Booking Dashboard</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    
+    <noscript>Please enable JavaScript.</noscript>
 </head>
 <body>
-    <header class="navbar">
+    <header class="navbar" style="background-color: #0C63E7;">
         <div class="logo-section">
             <img src="cit logo.png" alt="CIT Logo" class="logo-image">
-            <h2>CIT Venue Booking Portal</h2>
+            <h2 style="font: arial; color: aliceblue;">
+                <abbr title="Coimbatore Institute of Technology">CIT</abbr> Venue Booking Portal
+            </h2>
         </div>
-        <button class="logout-btn">Logout</button>
+        
+        <nav>
+            <button class="logout-btn" onclick="window.location.href='login.html'">Logout</button>
+        </nav>
     </header>
 
     <main class="dashboard-container">
-        <div class="dashboard-header">
+        
+        <section class="dashboard-header">
             <h2>Welcome to the CIT Venue Booking Dashboard</h2>
-            <p>Manage your venue bookings efficiently and effectively.</p>
-        </div>
+            <p>Manage your venue bookings <strong>efficiently </strong> and <strong>effectively</strong>.</p>
+            
+            <hr style="border: 0.5px solid #ccc; margin-top: 10px;">
+        </section>
 
         <div class="cards-section">
             <div class="card clickable" id="available-venues-card">
-                <div class="icon-wrapper">🏢</div>
+                <span class="icon-wrapper">🏢</span>
                 <h3>Available Venues</h3>
-                <p>View and manage the list of available venues for booking.</p>
+                <p>View and manage the list of available <br> venues for booking.</p>
             </div>
 
             <div class="card">
-                <div class="icon-wrapper">📅</div>
+                <span class="icon-wrapper">📅</span>
                 <h3>Book A Venue</h3>
-                <p>Reserve a venue for your event or meeting.</p>
+                <p>Reserve a venue for your <u>event</u> or meeting.</p>
             </div>
         </div>
 
         <div id="venue-list-section" class="venue-list hidden">
             <h3>Available Venues</h3>
             <ul>
-                <li>Auditorium - Capacity: 200</li>
-                <li>Conference Room A - Capacity: 50</li>
-                <li>Conference Room B - Capacity: 30</li>
-                <li>Outdoor Space - Capacity: 100</li>
+                <li>Auditorium - Capacity: <mark>200</mark></li>
+                <li>Conference Room A - Capacity: <mark>50</mark></li>
+                <li>Conference Room B - Capacity: <mark>30</mark></li>
+                <li>Outdoor Space - Capacity: <mark>100</mark></li>
             </ul>
         </div>
     </main>
+
+    <footer style="text-align: center; margin-top: 30px; color: #777;">
+        <small>&copy; 2026 CIT. <a href="#" style="color: #0C63E7;">Contact Support</a></small>
+    </footer>
+
 </body>
 </html>
