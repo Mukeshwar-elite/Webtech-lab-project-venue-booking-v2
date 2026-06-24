@@ -52,6 +52,16 @@
     font-size: 14px;
 }
 
+.input-group input[type="text"],
+.input-group input[type="password"],
+.input-group input[type="tel"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: sans-serif;
+}
+
 /* Form Inputs */
 .input-group {
     margin-bottom: 20px;
@@ -217,4 +227,98 @@ body {
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8); 
     width: 100%;
     box-sizing: border-box;
+}
+
+/* =========================================
+   SLIDER STYLES
+   ========================================= */
+.slider-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* Hides slides that are outside the box */
+    border-radius: 8px;
+    margin-top: 15px;
+    background-color: #f8faff;
+    border: 1px solid #e0e8f5;
+}
+
+.slider-track {
+    display: flex;
+    transition: transform 0.4s ease-in-out; /* The smooth gliding animation */
+    width: 100%;
+}
+
+.slide {
+    min-width: 100%; /* Forces each slide to take up the full container */
+    box-sizing: border-box;
+    padding: 30px;
+    text-align: center;
+}
+
+.slide h4 {
+    margin: 10px 0;
+    color: #0C63E7;
+    font-size: 20px;
+}
+
+.slide-icon {
+    font-size: 40px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.slide-desc {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Slider Buttons */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #0C63E7;
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.slider-btn:hover {
+    background-color: #0a52c2;
+}
+
+.prev-btn { left: 15px; }
+.next-btn { right: 15px; }
+
+/* Dots */
+.slider-dots {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: #ccc;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #0C63E7;
+    width: 25px;
+    border-radius: 10px; /* Makes the active dot look like a pill */
 }

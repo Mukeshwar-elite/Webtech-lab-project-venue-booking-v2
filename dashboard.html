@@ -6,15 +6,14 @@
     <title>Venue Booking Dashboard</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
-    
     <noscript>Please enable JavaScript.</noscript>
 </head>
 <body>
-    <header class="navbar" style="background-color: #0C63E7;">
+    <header class="navbar" style="background-color:lightseagreen;">
         <div class="logo-section">
             <img src="cit logo.png" alt="CIT Logo" class="logo-image">
-            <h2 style="font: arial; color: aliceblue;">
-                <abbr title="Coimbatore Institute of Technology">CIT</abbr> Venue Booking Portal
+            <h2>
+                CIT Venue Booking Portal
             </h2>
         </div>
         
@@ -26,10 +25,9 @@
     <main class="dashboard-container">
         
         <section class="dashboard-header">
-            <h2>Welcome to the CIT Venue Booking Dashboard</h2>
-            <p>Manage your venue bookings <strong>efficiently </strong> and <strong>effectively</strong>.</p>
-            
-            <hr style="border: 0.5px solid #ccc; margin-top: 10px;">
+            <h2 id="welcome-message">Welcome to the CIT Venue Booking Dashboard</h2>
+            <p>Manage your venue bookings <strong>efficiently</strong> and <strong>effectively</strong>.</p>
+            <hr class="header-divider">
         </section>
 
         <div class="cards-section">
@@ -45,20 +43,53 @@
                 <p>Reserve a venue for your <u>event</u> or meeting.</p>
             </div>
         </div>
-
-        <div id="venue-list-section" class="venue-list hidden">
+<div id="venue-list-section" class="venue-list hidden">
             <h3>Available Venues</h3>
-            <ul>
-                <li>Auditorium - Capacity: <mark>200</mark></li>
-                <li>Conference Room A - Capacity: <mark>50</mark></li>
-                <li>Conference Room B - Capacity: <mark>30</mark></li>
-                <li>Outdoor Space - Capacity: <mark>100</mark></li>
-            </ul>
+            
+            <div class="slider-container">
+                <button class="slider-btn prev-btn" id="prev-btn">&#10094;</button>
+                
+                <div class="slider-track" id="slider-track">
+                    
+                    <div class="slide">
+                        <span class="slide-icon"></span>
+                        <h4>Main Auditorium</h4>
+                        <p>Capacity: <mark>200</mark></p>
+                        <p class="slide-desc">Perfect for large conferences, guest lectures, and major events.</p>
+                    </div>
+                    
+                    <div class="slide">
+                        <span class="slide-icon"></span>
+                        <h4>Conference Room A</h4>
+                        <p>Capacity: <mark>50</mark></p>
+                        <p class="slide-desc">Equipped with a projector and round-table setup for department meetings.</p>
+                    </div>
+
+                    <div class="slide">
+                        <span class="slide-icon"></span>
+                        <h4>Conference Room B</h4>
+                        <p>Capacity: <mark>30</mark></p>
+                        <p class="slide-desc">Intimate setting for small team syncs and interviews.</p>
+                    </div>
+
+                    <div class="slide">
+                        <span class="slide-icon"></span>
+                        <h4>Outdoor Space</h4>
+                        <p>Capacity: <mark>100+</mark></p>
+                        <p class="slide-desc">Open-air venue ideal for cultural events and student gatherings.</p>
+                    </div>
+
+                </div>
+                
+                <button class="slider-btn next-btn" id="next-btn">&#10095;</button>
+            </div>
+            
+            <div class="slider-dots" id="slider-dots"></div>
         </div>
     </main>
 
-    <footer style="text-align: center; margin-top: 30px; color: #777;">
-        <small>&copy; 2026 CIT. <a href="#" style="color: #0C63E7;">Contact Support</a></small>
+    <footer class="site-footer">
+        <small>&copy; 2026 CIT. <a href="#">Contact Support</a></small>
     </footer>
 
 </body>
