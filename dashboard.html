@@ -4,93 +4,167 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Venue Booking Dashboard</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
-    <noscript>Please enable JavaScript.</noscript>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #0A2540;
+            color: white;
+            padding: 15px 20px;
+        }
+        
+        .logo-image {
+            height: 40px;
+            vertical-align: middle;
+        }
+
+        .navbar h2 {
+            display: inline;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+
+        .logout-btn {
+            float: right;
+            margin-top: 8px;
+            background-color: red;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dashboard-container {
+            padding: 20px;
+        }
+
+        .card {
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 20px;
+            display: inline-block;
+            width: 45%;
+            margin-right: 2%;
+            cursor: pointer; /* Makes it look clickable */
+        }
+
+        .slider-track {
+            overflow-x: scroll; 
+            white-space: nowrap; 
+            background-color: white;
+            padding: 15px;
+            border: 1px solid #ccc;
+        }
+
+        .slide {
+            display: inline-block; 
+            width: 250px;
+            background-color: #e6f2ff;
+            border: 1px solid #99c2ff;
+            padding: 15px;
+            margin-right: 15px;
+            vertical-align: top;
+            white-space: normal; 
+        }
+
+        .slide h4 {
+            margin-top: 0;
+            color: #0A2540;
+        }
+
+        .site-footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #ddd;
+        }
+    </style>
 </head>
 <body>
-    <header class="navbar" style="background-color:#0A2540">
+
+    <header class="navbar">
         <div class="logo-section">
             <img src="cit logo.png" alt="CIT Logo" class="logo-image">
-            <h2 style="color: white;">
-                CIT Venue Booking Portal
-            </h2>
-        </div>
-        
-        <nav>
+            <h2>CIT Venue Booking Portal</h2>
             <button class="logout-btn" onclick="window.location.href='login.html'">Logout</button>
-        </nav>
+        </div>
     </header>
 
     <main class="dashboard-container">
         
         <section class="dashboard-header">
-            <h2 id="welcome-message">Welcome to the CIT Venue Booking Dashboard</h2>
-            <p>Manage your venue bookings <strong>efficiently</strong> and <strong>effectively</strong>.</p>
-            <hr class="header-divider">
+            <h2>Welcome to the CIT Venue Booking Dashboard</h2>
+            <p>Manage your venue bookings efficiently and effectively.</p>
+            <hr>
         </section>
 
         <div class="cards-section">
-            <div class="card clickable" id="available-venues-card">
-                <span class="icon-wrapper">🏢</span>
-                <h3>Available Venues</h3>
-                <p>View and manage the list of available <br> venues for booking.</p>
+            <div class="card" id="available-venues-card" onclick="toggleVenues()">
+                <h3>🏢 Available Venues</h3>
+                <p>Click here to view and manage the list of available venues.</p>
             </div>
 
-            <div class="card clickable" onclick="window.location.href='book-venue.html'">
-               <span class="icon-wrapper">📅</span>
-                 <h3>Book A Venue</h3>
-                 <p>Reserve a venue for your <u>event</u> or meeting.</p>
+            <div class="card" onclick="window.location.href='book-venue.html'">
+                 <h3>📅 Book A Venue</h3>
+                 <p>Reserve a venue for your event or meeting.</p>
             </div>
         </div>
-<div id="venue-list-section" class="venue-list hidden">
+
+        <div id="venue-list-section" class="venue-list" style="display: none;">
             <h3>Available Venues</h3>
             
-            <div class="slider-container">
-                <button class="slider-btn prev-btn" id="prev-btn">&#10094;</button>
-                
-                <div class="slider-track" id="slider-track">
-                    
-                    <div class="slide">
-                        <span class="slide-icon"></span>
-                        <h4>Main Auditorium</h4>
-                        <p>Capacity: <mark>200</mark></p>
-                        <p class="slide-desc">Perfect for large conferences, guest lectures, and major events.</p>
-                    </div>
-                    
-                    <div class="slide">
-                        <span class="slide-icon"></span>
-                        <h4>Conference Room A</h4>
-                        <p>Capacity: <mark>50</mark></p>
-                        <p class="slide-desc">Equipped with a projector and round-table setup for department meetings.</p>
-                    </div>
-
-                    <div class="slide">
-                        <span class="slide-icon"></span>
-                        <h4>Conference Room B</h4>
-                        <p>Capacity: <mark>30</mark></p>
-                        <p class="slide-desc">Intimate setting for small team syncs and interviews.</p>
-                    </div>
-
-                    <div class="slide">
-                        <span class="slide-icon"></span>
-                        <h4>Outdoor Space</h4>
-                        <p>Capacity: <mark>100+</mark></p>
-                        <p class="slide-desc">Open-air venue ideal for cultural events and student gatherings.</p>
-                    </div>
-
+            <div class="slider-track" id="slider-track">
+                <div class="slide">
+                    <h4>Main Auditorium</h4>
+                    <p>Capacity: <mark>200</mark></p>
+                    <p>Perfect for large conferences, guest lectures, and major events.</p>
                 </div>
                 
-                <button class="slider-btn next-btn" id="next-btn">&#10095;</button>
+                <div class="slide">
+                    <h4>Conference Room A</h4>
+                    <p>Capacity: <mark>50</mark></p>
+                    <p>Equipped with a projector and round-table setup for department meetings.</p>
+                </div>
+
+                <div class="slide">
+                    <h4>Conference Room B</h4>
+                    <p>Capacity: <mark>30</mark></p>
+                    <p>Intimate setting for small team syncs and interviews.</p>
+                </div>
+
+                <div class="slide">
+                    <h4>Outdoor Space</h4>
+                    <p>Capacity: <mark>100+</mark></p>
+                    <p>Open-air venue ideal for cultural events and student gatherings.</p>
+                </div>
             </div>
-            
-            <div class="slider-dots" id="slider-dots"></div>
         </div>
+
     </main>
 
     <footer class="site-footer">
-        <small>&copy; 2026 CIT. <a href="#">Contact Support</a></small>
+        <p>&copy; 2026 CIT. Contact Support</p>
     </footer>
+
+    <script>
+        function toggleVenues() {
+            // Get the venue list section by its ID
+            var venueSection = document.getElementById("venue-list-section");
+            
+            // If it is hidden, show it. If it is showing, hide it.
+            if (venueSection.style.display === "none") {
+                venueSection.style.display = "block";
+            } else {
+                venueSection.style.display = "none";
+            }
+        }
+    </script>
 
 </body>
 </html>
